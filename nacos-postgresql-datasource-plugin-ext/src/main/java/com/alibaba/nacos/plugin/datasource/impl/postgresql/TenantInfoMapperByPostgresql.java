@@ -24,11 +24,6 @@ import com.alibaba.nacos.plugin.datasource.mapper.TenantInfoMapper;
 public class TenantInfoMapperByPostgresql extends AbstractMapper implements TenantInfoMapper {
 
     @Override
-    public String getTableName() {
-        return TableConstant.TENANT_INFO;
-    }
-
-    @Override
     public String getDataSource() {
         return DatabaseTypeConstant.POSTGRESQL;
     }
