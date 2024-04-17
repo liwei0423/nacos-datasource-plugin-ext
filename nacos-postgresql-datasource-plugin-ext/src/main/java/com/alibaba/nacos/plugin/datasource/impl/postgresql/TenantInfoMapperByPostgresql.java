@@ -17,18 +17,20 @@
 package com.alibaba.nacos.plugin.datasource.impl.postgresql;
 
 import com.alibaba.nacos.plugin.datasource.constants.DatabaseTypeConstant;
-import com.alibaba.nacos.plugin.datasource.impl.base.BaseTenantInfoMapper;
+import com.alibaba.nacos.plugin.datasource.constants.TableConstant;
+import com.alibaba.nacos.plugin.datasource.mapper.AbstractMapper;
+import com.alibaba.nacos.plugin.datasource.mapper.TenantInfoMapper;
 
-/**
- * The postgresql implementation of ConfigInfoAggrMapper.
- *
- * @author Long Yu
- **/
-public class TenantInfoMapperByPostgresql extends BaseTenantInfoMapper {
-    
+public class TenantInfoMapperByPostgresql extends AbstractMapper implements TenantInfoMapper {
+
+    @Override
+    public String getTableName() {
+        return TableConstant.TENANT_INFO;
+    }
+
     @Override
     public String getDataSource() {
         return DatabaseTypeConstant.POSTGRESQL;
     }
-    
+
 }
