@@ -1,3 +1,5 @@
+package com.alibaba.nacos.plugin.datasource.impl.postgresql;
+
 /*
  * Copyright 1999-2022 Alibaba Group Holding Ltd.
  *
@@ -14,18 +16,19 @@
  * limitations under the License.
  */
 
-package com.alibaba.nacos.plugin.datasource.impl.postgresql;
 
-import com.alibaba.nacos.plugin.datasource.constants.DatabaseTypeConstant;
-import com.alibaba.nacos.plugin.datasource.constants.TableConstant;
+import com.alibaba.nacos.plugin.datasource.enums.TrustedPostgresqlFunctionEnum;
 import com.alibaba.nacos.plugin.datasource.mapper.AbstractMapper;
-import com.alibaba.nacos.plugin.datasource.mapper.TenantInfoMapper;
 
-public class TenantInfoMapperByPostgresql extends AbstractMapperByPostgresql implements TenantInfoMapper {
+/**
+ * The abstract mysql mapper contains CRUD methods.
+ *
+ * @author blake.qiu
+ **/
+public abstract class AbstractMapperByPostgresql extends AbstractMapper {
 
     @Override
-    public String getDataSource() {
-        return DatabaseTypeConstant.POSTGRESQL;
+    public String getFunction(String functionName) {
+        return TrustedPostgresqlFunctionEnum.getFunctionByName(functionName);
     }
-
 }

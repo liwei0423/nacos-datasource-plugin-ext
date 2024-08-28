@@ -27,7 +27,7 @@ import com.alibaba.nacos.plugin.datasource.model.MapperResult;
 
 import java.util.List;
 
-public class ConfigInfoAggrMapperByPostgresql extends AbstractMapper implements ConfigInfoAggrMapper {
+public class ConfigInfoAggrMapperByPostgresql extends AbstractMapperByPostgresql implements ConfigInfoAggrMapper {
 
     @Override
     public MapperResult findConfigInfoAggrByPageFetchRows(MapperContext context) {

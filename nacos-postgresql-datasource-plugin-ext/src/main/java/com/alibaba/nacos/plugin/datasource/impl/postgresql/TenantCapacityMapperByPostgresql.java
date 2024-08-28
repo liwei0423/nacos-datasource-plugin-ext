@@ -25,7 +25,7 @@ import com.alibaba.nacos.plugin.datasource.mapper.TenantCapacityMapper;
 import com.alibaba.nacos.plugin.datasource.model.MapperContext;
 import com.alibaba.nacos.plugin.datasource.model.MapperResult;
 
-public class TenantCapacityMapperByPostgresql extends AbstractMapper implements TenantCapacityMapper {
+public class TenantCapacityMapperByPostgresql extends AbstractMapperByPostgresql implements TenantCapacityMapper {
 
     @Override
     public MapperResult getCapacityList4CorrectUsage(MapperContext context) {

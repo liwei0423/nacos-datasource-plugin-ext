@@ -17,8 +17,6 @@
 package com.alibaba.nacos.plugin.datasource.impl.postgresql;
 
 import com.alibaba.nacos.plugin.datasource.constants.DatabaseTypeConstant;
-import com.alibaba.nacos.plugin.datasource.constants.TableConstant;
-import com.alibaba.nacos.plugin.datasource.mapper.AbstractMapper;
 import com.alibaba.nacos.plugin.datasource.mapper.ConfigInfoBetaMapper;
 import com.alibaba.nacos.plugin.datasource.model.MapperContext;
 import com.alibaba.nacos.plugin.datasource.model.MapperResult;
@@ -26,7 +24,7 @@ import com.alibaba.nacos.plugin.datasource.model.MapperResult;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConfigInfoBetaMapperByPostgresql extends AbstractMapper implements ConfigInfoBetaMapper {
+public class ConfigInfoBetaMapperByPostgresql extends AbstractMapperByPostgresql implements ConfigInfoBetaMapper {
 
     @Override
     public MapperResult findAllConfigInfoBetaForDumpAllFetchRows(MapperContext context) {

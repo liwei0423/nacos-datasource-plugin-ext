@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class ConfigTagsRelationMapperByPostgresql extends AbstractMapper implements ConfigTagsRelationMapper {
+public class ConfigTagsRelationMapperByPostgresql extends AbstractMapperByPostgresql implements ConfigTagsRelationMapper {
 
     @Override
     public MapperResult findConfigInfo4PageFetchRows(MapperContext context) {

@@ -24,6 +24,7 @@ import com.alibaba.nacos.plugin.datasource.constants.ContextConstant;
 import com.alibaba.nacos.plugin.datasource.constants.DatabaseTypeConstant;
 import com.alibaba.nacos.plugin.datasource.constants.FieldConstant;
 import com.alibaba.nacos.plugin.datasource.constants.TableConstant;
+import com.alibaba.nacos.plugin.datasource.enums.TrustedPostgresqlFunctionEnum;
 import com.alibaba.nacos.plugin.datasource.mapper.AbstractMapper;
 import com.alibaba.nacos.plugin.datasource.mapper.ConfigInfoMapper;
 import com.alibaba.nacos.plugin.datasource.model.MapperContext;
@@ -35,7 +36,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-public class ConfigInfoMapperByPostgresql extends AbstractMapper implements ConfigInfoMapper {
+public class ConfigInfoMapperByPostgresql extends AbstractMapperByPostgresql implements ConfigInfoMapper {
 
     private static final String DATA_ID = "dataId";
 
@@ -263,6 +264,17 @@ public class ConfigInfoMapperByPostgresql extends AbstractMapper implements Conf
         return new MapperResult(sql,
                 CollectionUtils.list(context.getWhereParameter(FieldConstant.TENANT_ID), context.getStartRow(),
                         context.getPageSize()));
+    }
+
+    /**
+     * 解决NOW(integer)错误问题
+     *
+     * @param functionName
+     * @return
+     */
+    @Override
+    public String getFunction(String functionName) {
+        return TrustedPostgresqlFunctionEnum.getFunctionByName(functionName);
     }
 
     @Override

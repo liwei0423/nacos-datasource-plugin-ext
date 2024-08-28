@@ -24,7 +24,7 @@ import com.alibaba.nacos.plugin.datasource.model.MapperResult;
 
 import java.util.Collections;
 
-public class ConfigInfoTagMapperByPostgresql extends AbstractMapper implements ConfigInfoTagMapper {
+public class ConfigInfoTagMapperByPostgresql extends AbstractMapperByPostgresql implements ConfigInfoTagMapper {
 
     @Override
     public MapperResult findAllConfigInfoTagForDumpAllFetchRows(MapperContext context) {

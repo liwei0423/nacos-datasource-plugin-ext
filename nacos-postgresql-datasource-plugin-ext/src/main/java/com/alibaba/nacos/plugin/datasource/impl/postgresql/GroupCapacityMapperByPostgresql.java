@@ -25,7 +25,7 @@ import com.alibaba.nacos.plugin.datasource.mapper.GroupCapacityMapper;
 import com.alibaba.nacos.plugin.datasource.model.MapperContext;
 import com.alibaba.nacos.plugin.datasource.model.MapperResult;
 
-public class GroupCapacityMapperByPostgresql extends AbstractMapper implements GroupCapacityMapper {
+public class GroupCapacityMapperByPostgresql extends AbstractMapperByPostgresql implements GroupCapacityMapper {
 
     @Override
     public MapperResult selectGroupInfoBySize(MapperContext context) {
