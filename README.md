@@ -42,10 +42,10 @@ nacos-postgresql-datasource-plugin-ext工程可打包适配Postgresql的数据�
 
 ```java
 spring.datasource.platform=postgresql
-db.url.0=jdbc:postgresql://127.0.0.1:5432/nacos?tcpKeepAlive=true&reWriteBatchedInserts=true&ApplicationName=nacos_java
+db.url.0=jdbc:gaussdb://127.0.0.1:5432/nacos?tcpKeepAlive=true&reWriteBatchedInserts=true&ApplicationName=nacos_java
 db.user=nacos
 db.password=nacos
-db.pool.config.driverClassName=org.postgresql.Driver
+db.pool.config.driverClassName=com.huawei.gaussdb.jdbc.Driver
 ```
 
 ### 2.3、导入Postgresql的数据库脚本文件
