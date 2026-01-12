@@ -28,7 +28,7 @@
 <!--        </dependency>-->
         <dependency>
             <groupId>com.wshoto</groupId>
-            <artifactId>opengauss-jdbc</artifactId>
+            <artifactId>gsjdbc4-jdbc</artifactId>
             <version>5.0.0</version>
         </dependency>
         <dependency>
