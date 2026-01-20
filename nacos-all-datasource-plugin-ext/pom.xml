@@ -22,7 +22,7 @@
         <dependency>
             <groupId>com.alibaba.nacos</groupId>
             <artifactId>nacos-postgresql-datasource-plugin-ext</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>${postgresql-datasource-plugin-version}</version>
         </dependency>
     </dependencies>
     
