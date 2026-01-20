@@ -3,7 +3,6 @@ package com.alibaba.nacos.plugin.datasource.impl.postgresql;
 import com.alibaba.nacos.common.utils.CollectionUtils;
 import com.alibaba.nacos.plugin.datasource.constants.DatabaseTypeConstant;
 import com.alibaba.nacos.plugin.datasource.constants.FieldConstant;
-import com.alibaba.nacos.plugin.datasource.constants.TableConstant;
 import com.alibaba.nacos.plugin.datasource.mapper.TenantCapacityMapper;
 import com.alibaba.nacos.plugin.datasource.model.MapperContext;
 import com.alibaba.nacos.plugin.datasource.model.MapperResult;
@@ -81,11 +80,6 @@ public class TenantCapacityMapperByPostgresql extends PostgresqlAbstractMapper i
         return new MapperResult(
                 "INSERT INTO tenant_capacity (tenant_id, quota, `usage`, max_size, max_aggr_count, max_aggr_size, gmt_create, gmt_modified) SELECT ?, ?, count(*), ?, ?, ?, ?, ? FROM config_info WHERE tenant_id=?",
                 paramList);
-    }
-
-    @Override
-    public String getTableName() {
-        return TableConstant.TENANT_CAPACITY;
     }
 
 

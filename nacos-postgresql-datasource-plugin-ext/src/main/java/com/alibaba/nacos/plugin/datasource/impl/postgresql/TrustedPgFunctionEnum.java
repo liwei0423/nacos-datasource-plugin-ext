@@ -3,10 +3,6 @@ package com.alibaba.nacos.plugin.datasource.impl.postgresql;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author lengleng
- * @date 2024/8/25
- */
 public enum TrustedPgFunctionEnum {
 
 	/**

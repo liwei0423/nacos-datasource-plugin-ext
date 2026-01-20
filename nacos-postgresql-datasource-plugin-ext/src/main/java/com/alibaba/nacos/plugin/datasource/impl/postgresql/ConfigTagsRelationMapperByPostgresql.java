@@ -58,17 +58,17 @@ public class ConfigTagsRelationMapperByPostgresql extends PostgresqlAbstractMapp
 				paramList);
 	}
 
-	@Override
-	public MapperResult findConfigInfo4PageFetchRows(MapperContext mapperContext) {
-		return null;
-	}
+    @Override
+    public MapperResult findConfigInfo4PageFetchRows(MapperContext mapperContext) {
+        return null;
+    }
 
-	@Override
-	public MapperResult findConfigInfoLike4PageFetchRows(MapperContext mapperContext) {
-		return null;
-	}
+    @Override
+    public MapperResult findConfigInfoLike4PageFetchRows(MapperContext mapperContext) {
+        return null;
+    }
 
-	@Override
+    @Override
 	public String getDataSource() {
 		return DatabaseTypeConstant.POSTGRESQL;
 	}

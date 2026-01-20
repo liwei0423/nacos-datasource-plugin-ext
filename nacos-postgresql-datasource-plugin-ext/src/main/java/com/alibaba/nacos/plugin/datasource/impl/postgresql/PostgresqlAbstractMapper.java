@@ -6,11 +6,6 @@ import com.alibaba.nacos.plugin.datasource.mapper.AbstractMapper;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * @author Fxz
- * @version 0.0.1
- * @date 2022/12/19 21:01
- */
 public abstract class PostgresqlAbstractMapper extends AbstractMapper {
 
 	@Override
