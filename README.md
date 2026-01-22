@@ -6,10 +6,6 @@
 
 从Nacos2.2版本开始，Nacos提供了数据源扩展插件，以便让需要进行其他数据库适配的用户自己编写插件来保存数据。当前项目插件目前已简单适配Postgresql。
 
-如需Nacos2.1支持，请移步个人的如下这个仓库：
-
-https://github.com/wuchubuzai2018/nacos-multidatasource
-
 当前项目基于Nacos2.2版本的扩展插件口进行开发。
 
 ### 2.2、插件工程结构说明
