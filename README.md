@@ -20,13 +20,13 @@ nacos-postgresql-datasource-plugin-ext工程可打包适配Postgresql的数据�
 
 ### 2.1、插件引入
 
-官方nacos组件中放入插件包
+官方nacos组件解压放入插件包
 
 ```bash
-# 进入nacos根目录（bin同级）
+# 下载解压官方nacos组件包，进入nacos根目录
 cd nacos
 
-# 创建插件文件夹
+# 创建插件文件夹（bin同级）
 mkdir plugins
 
 # 把此postgresql插件包，放入plugins文件夹里
