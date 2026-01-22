@@ -20,33 +20,34 @@ nacos-postgresql-datasource-plugin-ext工程可打包适配Postgresql的数据�
 
 ### 2.1、插件引入
 
-方式一：使用postgresql作为依赖引入到Nacos主分支源码中，例如：
+官方nacos组件中放入插件包
 
-```xml
-<dependency>
-            <groupId>com.alibaba.nacos</groupId>
-            <artifactId>nacos-postgresql-datasource-plugin-ext</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
+```bash
+# 进入nacos根目录（bin同级）
+cd nacos
+
+# 创建插件文件夹
+mkdir plugins
+
+# 把此postgresql插件包，放入plugins文件夹里
 ```
-
-方式二：下载当前插件项目源码，打包为jar包，将该文件的路径配置到startup.sh文件中，使用Nacos的loader.path机制指定该插件的路径，可修改startup.sh中的loader.path参数的位置进行指定。
 
 ### 2.2、修改数据库配置文件
 
-在application.properties文件中声明postgresql的配置信息：
+在application.properties文件中新增下面这些配置：
 
 ```java
 spring.datasource.platform=postgresql
+db.num=1
 db.url.0=jdbc:postgresql://127.0.0.1:5432/nacos?tcpKeepAlive=true&reWriteBatchedInserts=true&ApplicationName=nacos_java
-db.user=nacos
-db.password=nacos
+db.user.0=postgres
+db.password.0=123456
 db.pool.config.driverClassName=org.postgresql.Driver
 ```
 
 ### 2.3、导入Postgresql的数据库脚本文件
 
-导入nacos-postgresql的脚本文件，脚本文件在nacos-postgresql-datasource-plugin-ext/src/main/resources/schema文件夹下面.
+postgresql数据库，导入nacos-postgresql的脚本文件。脚本文件在nacos-postgresql-datasource-plugin-ext/src/main/resources/schema文件夹下面.
 
 上面操作完成后，启动Nacos即可。
 
