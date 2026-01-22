@@ -34,7 +34,7 @@ mkdir plugins
 
 ### 2.2、修改数据库配置文件
 
-在application.properties文件中新增下面这些配置：
+nacos目录conf/application.properties文件中新增下面这些配置：
 
 ```java
 spring.datasource.platform=postgresql
